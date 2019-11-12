@@ -90,29 +90,29 @@ void loop() {
     s_data = Serial.read();
 
     switch(s_data)  {
-        case '1':  send_shit(TV1); break;
-        case '2':  send_shit(TV2); break;
-        case '3':  send_shit(TV3); break;
-        case '4':  send_shit(TV4); break;
-        case '5':  send_shit(TV5); break;
-        case '6':  send_shit(TV6); break;
-        case '7':  send_shit(TV7); break;
-        case '8':  send_shit(TV8); break;
-        case '9':  send_shit(TV9); break;
-        case ':':  send_shit(TV10); break;
-        case ';':  send_shit(TV11); break;
-        case '<':  send_shit(TV12); break;
-        case '=':  send_shit(TV13); break;
-        case '>':  send_shit(TV14); break;
-        case '?':  send_shit(TV15); break;
-        case '@':  send_shit(TV16); break;
+        case '1':  play_ir(TV1); break;
+        case '2':  play_ir(TV2); break;
+        case '3':  play_ir(TV3); break;
+        case '4':  play_ir(TV4); break;
+        case '5':  play_ir(TV5); break;
+        case '6':  play_ir(TV6); break;
+        case '7':  play_ir(TV7); break;
+        case '8':  play_ir(TV8); break;
+        case '9':  play_ir(TV9); break;
+        case ':':  play_ir(TV10); break;
+        case ';':  play_ir(TV11); break;
+        case '<':  play_ir(TV12); break;
+        case '=':  play_ir(TV13); break;
+        case '>':  play_ir(TV14); break;
+        case '?':  play_ir(TV15); break;
+        case '@':  play_ir(TV16); break;
         default: break;
     }
 
 }
 
 
-void send_shit(int _TV)  {
+void play_ir(int _TV)  {
   pinMode(_TV, OUTPUT);
   digitalWrite(_TV, LOW);
     //mySender.send(rawData,RAW_DATA_LEN,36);
